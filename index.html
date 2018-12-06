@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Dobby Game</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<style>
+    .sockIMG{
+        width:100px;
+        height:50px;
+    }
+</style>
+ 
+</head>
+<body>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">  
+            <img id = "mainimg" src="assets/images/maindobbyimage.jpg">
+            Free Doby!  
+    </h1>
+    <p class="lead">click on the socks to match the number, if you gather the correct amount of socks dobby will be set free! </p>
+     
+</div>
+</div>
+
+<div class = "container">
+<div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Click on the socks!</h5>
+              <div id = "sockimg">
+              </div>
+              <p class="card-text"></p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              
+              <h5 class="card-title">Number to Guess: <span id="number-to-guess"></span></h5>
+              <p class="card-text"></p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+<div class = "row">
+    <div class = "col-sm-6">
+            <div class="card cardlast">
+                    <div class="card-body">
+                      <h5 class="card-title">Number of socks you are at:</h5>
+                      <p id= "numberat"></p>
+                      
+                    </div>
+                  </div>
+    </div> 
+        
+        
+          <div class = "col-sm-3">
+             <button type="button" class="btn btn-primary">
+            Wins: <span class="badge badge-light">4</span>
+          </button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src= "assets/javascript/game.js"></script>
+
+
+</body>
+</html>
