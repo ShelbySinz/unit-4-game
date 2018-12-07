@@ -8,39 +8,45 @@ var counter = 0;
 
 $("#numberat").text(counter);
 
-var numberOptions = [15, 2, 6, 25];
+console.log(counter);
 
-for( var i= 0; i < numberOptions.length; i++){
+var wins = 0;
+var losses = 0;
 
-var sockimage = $("<img>");
+$("#wins").text(wins);
+$("#losses").text(losses);
 
-sockimage.addClass("sockIMG");
+var isGameover = false;
 
-sockimage.attr("src","assets/images/sockimage.jpg");
-   
-
-sockimage.attr("data-sockvalue", numberOptions[i]);
-
-$("#sockimg").append(sockimage);
-
-
+function reset(){
+targetNumber = Math.floor(Math.random()*101+19);
+counter = 0;
 }
 
-$(".SockIMG").click(function(){
 
-    var sockvalue = ($(this).attr("data-sockvalue"));
-    sockvalue = parseInt(sockvalue);
+$("#Sock").on("click",function(){
 
-    counter = counter + sockvalue;
+
+    var sockvalue = ($(this).val());
+
+   sockvalue = parseInt(sockvalue);
+
+   counter += sockvalue;
+
+  console.log(sockvalue);
 
     
 
     if (counter === targetNumber){
+        wins++;
         alert("you Win!");
+        reset();
     }
 
     else if (counter >= targetNumber){
+        losses++;
         alert("You Lose!");
+        reset();
     }
 
 });

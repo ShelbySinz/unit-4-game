@@ -34,3 +34,8 @@ body {
 .cardnum {
     padding-bottom: 13px;
 }
+
+#sock {
+    height:50px;
+    width: 100px;
+}
