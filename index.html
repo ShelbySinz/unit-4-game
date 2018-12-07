@@ -41,11 +41,13 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="card">
+          <div class="card cardnum">
             <div class="card-body">
               
-              <h5 class="card-title">Number to Guess: <span id="number-to-guess"></span></h5>
-              <p class="card-text"></p>
+              <h5 class="card-title">Number to Match:
+                <br>  
+                <span id="number-to-guess"></span></h5>
+            
               
             </div>
           </div>
@@ -57,20 +59,24 @@
     <div class = "col-sm-6">
             <div class="card cardlast">
                     <div class="card-body">
-                      <h5 class="card-title">Number of socks you are at:</h5>
-                      <p id= "numberat"></p>
-                      
+                      <h5 class="card-title socknum">Number of socks you are at:
+                          <br>
+                      <span id= "numberat"></span>
+                    </h5>
                     </div>
                   </div>
     </div> 
         
-        
-          <div class = "col-sm-3">
-             <button type="button" class="btn btn-primary">
-            Wins: <span class="badge badge-light">4</span>
-          </button>
-
-        </div>
+        <div class = "col-sm-6">
+    <ul class="list-group">
+            <li class="list-group-item disabled">Wins:
+                <span id ="wins"></span>
+            </li>
+            <li class="list-group-item">Losses:
+                <span id="losses"></span>
+            </li>
+          </ul>
+        </div> 
     </div>
 </div>
 

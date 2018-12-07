@@ -17,3 +17,20 @@ body {
     margin-bottom: 20px;
 
 }
+
+.jumbotron {
+    height: 260px;
+    margin-left:20px;
+    margin-right: 20px;
+
+}
+
+.card-title{
+    font-size: 30px;
+
+}                
+
+
+.cardnum {
+    padding-bottom: 13px;
+}

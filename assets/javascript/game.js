@@ -1,6 +1,6 @@
-$( document ).ready(function(){
+$(document).ready(function(){
 
-var targetNumber = 58;
+var targetNumber = Math.floor(Math.random()*101+19);
 
 $("#number-to-guess").text(targetNumber);
 
@@ -26,22 +26,23 @@ $("#sockimg").append(sockimage);
 
 }
 
-$(".SockIMG").on("click", function(){
+$(".SockIMG").click(function(){
 
     var sockvalue = ($(this).attr("data-sockvalue"));
     sockvalue = parseInt(sockvalue);
 
-    counter += sockvalue;
+    counter = counter + sockvalue;
 
-    console.log(sockvalue);
+    
 
     if (counter === targetNumber){
         alert("you Win!");
     }
 
     else if (counter >= targetNumber){
-        alert("You Lose!")
+        alert("You Lose!");
     }
 
 });
+
 });
