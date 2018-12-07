@@ -35,7 +35,7 @@ body {
     padding-bottom: 13px;
 }
 
-#sock {
+.sock {
     height:50px;
     width: 100px;
 }
