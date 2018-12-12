@@ -16,7 +16,7 @@ var losses = 0;
 $("#wins").text(wins);
 $("#losses").text(losses);
 
-
+$("#freedobby").hide();
 
 function reset(){
 targetNumber = Math.floor(Math.random()*101+19);
@@ -27,6 +27,38 @@ $("#numberat, #number-to-guess").empty();
 
 }
 
+function imFree(){
+    $("#freedobby").show();
+}
+function hidedobby(){
+    $("#freedobby").hide("60000");
+}
+
+
+
+    function roundDone (){
+        if (counter === targetNumber){
+            wins++;
+            $("#wins").text(wins);
+            imFree(); 
+            
+            reset();
+           
+            $("#number-to-guess").text(targetNumber);
+            $("#numberat").text(counter);
+          setTimeout (hidedobby, 3000);
+            
+        }
+    
+        else if (counter >= targetNumber){
+            losses++;
+            $("#losses").text(losses);
+            alert("You Lose!");
+            reset();
+            $("#number-to-guess").text(targetNumber);
+            $("#numberat").text(counter);
+        }
+    }
 
 $(".one").on("click",function(){
 
@@ -44,25 +76,14 @@ counter += sockvalue;
 
   console.log(sockvalue);
 
+
+
     
 
-    if (counter === targetNumber){
-        wins++;
-        $("#wins").text(wins);
-        alert("you Win!");
-        reset();
-        $("#number-to-guess").text(targetNumber);
-        $("#numberat").text(counter);
-    }
 
-    else if (counter >= targetNumber){
-        losses++;
-        $("#losses").text(losses);
-        alert("You Lose!");
-        reset();
-        $("#number-to-guess").text(targetNumber);
-        $("#numberat").text(counter);
-    }
+ 
+
+roundDone();
 
 });
 
