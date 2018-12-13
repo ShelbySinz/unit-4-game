@@ -62,9 +62,6 @@ function hidedobby(){
 
 $(".one").on("click",function(){
 
-    alert("get those socks!");
-
-
     var sockvalue = $(this).val();
 
    sockvalue = parseInt(sockvalue);
